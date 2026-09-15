@@ -3,6 +3,15 @@
 This explains, in simple terms, everything we did today, how we got the data, and
 what it sets up for Day 2.
 
+**Correction notice (added Sept 15, 2026, after an external review):** this file is
+kept as a historical record of the day's process and is largely still accurate, but a
+few specific conclusions it repeats — that ianalumab "failed" its early trial, that a
+"33%/100%" success-rate pattern exists across historical trials, and some detail on
+ESSDAI's proven failure history — were later found to be incorrect or overstated. The
+corrected versions live in `historical_trial_evidence.md`,
+`ianalumab_competitor_analysis.md`, and `essdai_measurement_properties.md` — treat
+those as authoritative over this recap where they differ.
+
 ## The big picture
 The job (a take-home test for a Jefferies healthcare equity research role) is to
 predict whether Amgen's drug dazodalibep will pass or fail its two big Phase 3 trials
@@ -38,7 +47,7 @@ a good reminder that primary sources beat secondhand ones).
 **Key finding:** The drug showed a real, statistically meaningful improvement in the
 main disease-activity score, though a secondary "did the patient clearly respond"
 measure was murkier — an early hint of a bigger theme covered in Step 4.
-**File:** `phase2_results_verified.md`
+**File:** `phase2_results.md`
 
 ## Step 3: What exactly are the two big trials testing, and are they finished yet?
 **What we did:** Looked up the official government registration for both of Amgen's
@@ -98,7 +107,7 @@ findings, so this was just fact-gathering from existing public medical literatur
 failed, regardless of drug type — except trials for drugs that work through the exact
 same biological pathway as dazodalibep, which have a perfect track record so far. That's
 a real, meaningful pattern favoring dazodalibep specifically, not just wishful thinking.
-**File:** `historical_base_rate_table.md`
+**File:** `historical_trial_evidence.md`
 
 ## Step 7: A lighter check on the second, smaller trial
 **What we did:** For the second trial (the one testing symptom relief rather than
@@ -109,7 +118,7 @@ specific area, cross-referenced against the same Phase 2 paper from Step 2.
 **Key finding:** This second trial actually looks somewhat safer from the placebo
 problem than the first one, based on its own earlier trial data being the strongest,
 cleanest result in the whole program.
-**File:** `nct06245408_esspri_risk_note.md`
+**File:** `nct06245408_risk_note.md`
 
 ---
 
@@ -136,7 +145,7 @@ Day 1 was entirely about **collecting real evidence**. Day 2 is about **turning 
 evidence into an actual prediction** — the part the test is really graded on. Here's
 what Day 2 will do with each piece we gathered today:
 
-1. **The Phase 2 numbers** (`phase2_results_verified.md`) become the starting point —
+1. **The Phase 2 numbers** (`phase2_results.md`) become the starting point —
    the "known" result we're trying to project forward into the bigger trial.
 2. **The measurement-system risks** (`essdai_measurement_properties.md`) tell us how
    much to discount or adjust that projection — since we now know the scoring system
@@ -144,7 +153,7 @@ what Day 2 will do with each piece we gathered today:
    the "fake treatment" group tends to improve on its own depending on how sick
    patients are at the start.
 3. **The competitor result and historical track record** (`ianalumab_competitor_analysis.md`,
-   `historical_base_rate_table.md`) become reference points for what a "realistic"
+   `historical_trial_evidence.md`) become reference points for what a "realistic"
    effect size looks like in this disease and this scoring system, and what odds this
    type of trial has historically had of succeeding.
 4. **Putting all of that together**, Day 2 will build three scenarios — an optimistic

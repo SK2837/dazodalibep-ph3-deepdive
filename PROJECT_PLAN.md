@@ -8,7 +8,18 @@ This is a take-home test for a Jefferies healthcare equity research job applicat
 
 This is a take-home test for a Jefferies Healthcare Equity Research role (associate/analyst track), due **Friday 9/18, 11:00am ET**. The brief: produce a "deep dive" PowerPoint that lays out analysis of Amgen's dazodalibep Phase 3 program in Sjögren's disease (**NCT06245408** & **NCT06104124**) and lands on an explicit, evidence-backed call — will the primary endpoint(s) read out positive or negative. The attached MDGL/MAESTRO-NASH deck is the template for the *kind* of thinking and slide anatomy expected, not the topic.
 
-Nothing has been built yet — the working folder only contains the reference PDF. This plan exists so we agree on scope and process **before** any research or slide-building starts, per your instruction: plan first, then move step-by-step, explaining the reasoning at each stage before producing content.
+**Status as of Sept 15, 2026 (updated — this section originally said "nothing has been
+built yet," which is now stale): Day 1 and Day 2 research/modeling are complete** — see
+`README.md` for the current file index and `day1_summary.md`/`final_thesis.md` for
+what's been produced. An external review (`external_review.md`) subsequently
+identified several factual and statistical errors in that work, which have been
+corrected across the affected files (see each file's own correction notes). Day 3
+(slide-by-slide outline) and Day 4 (deck build) have not yet started.
+
+This plan originally existed to agree on scope and process **before** any research or
+slide-building started, per the instruction: plan first, then move step-by-step,
+explaining the reasoning at each stage before producing content. That process has now
+happened through Day 1/2; this document is retained for its scope rationale below.
 
 **Decisions already locked in (from your answers):**
 - **Primary trial — NCT06104124 (systemic disease-activity study):** the full deep-dive treatment — Ph2→Ph3 bridge, bull/base/bear scenario modeling, minimum-effect-size/power calc, competitor + historical benchmarking, and the explicit positive/negative thesis.
@@ -43,7 +54,7 @@ The Dazodalibep analogue of each of these is mapped out in the framework below. 
 
 ### Primary trial — NCT06104124 (systemic), full treatment
 
-1. **Disease + biological rationale.** Sjögren's pathophysiology (lymphocytic infiltration of exocrine glands, ectopic germinal centers, no approved systemic therapy today), why the CD40–CD40L costimulatory axis is implicated (T cell–B cell help, germinal center/autoantibody formation), why blocking the **ligand** (dazodalibep) vs. the **receptor** (comparator: iscalimab) is a live design question, and dazodalibep's specific molecule (PASylated CD40L-antagonist fusion protein, Fc-silent by design) — including *why* first-generation anti-CD40L antibodies (e.g., ruplizumab/hu5c8) were abandoned for thromboembolism and how dazodalibep's engineering avoids that class-level risk. Written once; shared background for both trials. This becomes the "biological rationale" slides and directly informs the safety-risk slide.
+1. **Disease + biological rationale.** Sjögren's pathophysiology (lymphocytic infiltration of exocrine glands, ectopic germinal centers, no approved systemic therapy today), why the CD40–CD40L costimulatory axis is implicated (T cell–B cell help, germinal center/autoantibody formation), why blocking the **ligand** (dazodalibep) vs. the **receptor** (comparator: iscalimab) is a live design question, and dazodalibep's specific molecule — **corrected**: a Tn3-scaffold, Fc-free, non-antibody fusion protein (not "PASylated," an unrelated half-life-extension technology this plan originally and incorrectly used) — including *why* first-generation anti-CD40L antibodies (e.g., ruplizumab/hu5c8) were abandoned for thromboembolism and how dazodalibep's engineering avoids that specific known mechanism (platelet Fc-receptor crosslinking) without eliminating all thrombotic risk categorically. Written once; shared background for both trials. This becomes the "biological rationale" slides and directly informs the safety-risk slide.
 
 2. **Phase 2 deep dive** (St. Clair et al., Sjögren's Ph2, published 2024) — read for both cohorts from the single paper, but the **systemic disease-activity cohort (ESSDAI-based)** is the one that bridges directly into NCT06104124 and gets the deeper effect-size/responder-analysis treatment; the symptomatic cohort's numbers are only pulled at the level needed for the secondary section below. This is the single most important input — the Ph2→Ph3 "bridge" anchor, exactly like MDGL's Ph2 MRI-PDFF/NASH-resolution data was for MAESTRO-NASH.
 
