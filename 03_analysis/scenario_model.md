@@ -93,15 +93,19 @@ single-comparison 0.05 threshold, depending on the undisclosed testing hierarchy
 
 ## Scenario table — relabeled as illustrative assumptions, not forecasts
 
-The bull/base/bear framing below describes **assumed true effect sizes**, each checked
-against the SD=5.47 (competitor-based) sensitivity row as the more conservative,
-externally-anchored variance assumption, rather than the original SD=3.65:
+**Correction (second review pass): an assumed true effect does not produce "a
+p-value."** A p-value only exists once you have actual observed data — what an
+assumed true effect plus a variance assumption and a sample size actually gives you is
+**conditional power**: the probability that a trial would land on a significant result
+*if* that assumed effect were the truth and the trial were run many times. The table
+below is relabeled accordingly; treating "Two-sided p" as a property of a hypothetical
+scenario was a real category error in the earlier version of this file.
 
-| Scenario | Assumed true delta | SE (SD=5.47, n=217) | z | Two-sided p | Read |
+| Scenario | Assumed true delta | SE (SD=5.47, n=217) | z-equivalent | Conditional power (probability of a significant result if this delta is true) | Read |
 |---|---|---|---|---|---|
-| Bull | 2.0 | 0.524 | 3.82 | <0.001 | Would pass clearly if true |
-| Base | 1.4 | 0.524 | 2.67 | ≈0.008 | Would pass, with real but not enormous margin |
-| Bear | 0.6 | 0.524 | 1.15 | ≈0.25 | Would not reach significance if true |
+| Bull | 2.0 | 0.524 | 3.82 | ≈97% | Would very likely pass if true |
+| Base | 1.4 | 0.524 | 2.67 | ≈76% | Would likely pass, with real but not enormous margin (matches the SD=5.47 row in the sensitivity table above) |
+| Bear | 0.6 | 0.524 | 1.15 | ≈21% | Would likely not reach significance if true |
 
 These are **assumed inputs, not predicted outcomes** — the actual true effect is
 unknown, and the weights below are explicitly the analysts' qualitative judgment, not
@@ -117,11 +121,20 @@ Ianalumab's Ph2b→Ph3 transition (dose-response test met in Ph2b; both Phase 3 
 arms individually significant but narrow, p=0.0496 and p=0.041) is the only real
 external data point available for "what happens to a Sjögren's ESSDAI effect going
 from a smaller trial to a larger one in this disease." It is informative context, but
-**one transition cannot causally calibrate how much dazodalibep's specific,
-much-larger enrollment scale-up (74→651, ~8.8×, versus ianalumab's ~1.4×) will affect
-its own effect retention.** Any adjustment based on this single precedent should be
-treated as a qualitative sanity check, not a quantitative multiplier applied with
-false precision.
+**one transition cannot causally calibrate how much dazodalibep's own scale-up will
+affect its own effect retention.**
+
+**Correction (second review pass): the earlier "~8.8× vs. ~1.4×" comparison mixed
+total trial N with per-arm N, which is the statistically relevant quantity for a
+pairwise comparison's precision.** Redone using per-arm N: ianalumab's carried-forward
+dose arm went from ~47 (Ph2b's 300mg arm, N=190 across 4 arms) to ~137 (NEPTUNUS-1's
+monthly arm) — **≈2.9×**. Dazodalibep's went from 36 (Ph2 DAZ arm) to an assumed ~217
+(Phase 3 per-arm, N=651 across 3 arms) — **≈6.0×**. Directionally the same conclusion
+holds (dazodalibep's scale-up is larger, with no precedent for effect retention at
+that scale), but the honest magnitude is roughly **6× vs. 2.9×**, not 8.8× vs. 1.4× —
+a real but less dramatic difference than earlier stated. Any adjustment based on this
+single precedent should be treated as a qualitative sanity check, not a quantitative
+multiplier applied with false precision.
 
 ## What this file no longer claims
 - No "minimum detectable effect" is presented as a single fixed number — it depends on

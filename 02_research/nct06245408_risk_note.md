@@ -30,9 +30,20 @@ risk profile in ways worth naming rather than assuming away:
   than ESSPRI (which has a longer track record, including the Seror et al. MCID work
   cited in `essdai_measurement_properties.md`). Less external validation data exists to
   calibrate what a "real" DASPRI effect size looks like across trials.
-- Dazodalibep's own Phase 2 paper does report DASPRI results for Population 2
-  (mentioned in the paper's secondary endpoints), which should be pulled directly
-  and added here before this note is considered complete — not yet done in this pass.
+- **Correction (verified directly against the PDF's full text — searched, zero
+  occurrences): DASPRI does not appear anywhere in the 2024 Phase 2 paper.** An
+  earlier version of this note assumed the paper reported DASPRI results without
+  actually checking — that assumption was wrong. There is no dazodalibep-specific
+  Phase 2 precedent for DASPRI at all, for either population. This is a bigger gap
+  than "the number wasn't extracted yet" — the number doesn't exist in the published
+  Phase 2 record.
+- **Why this is likely, not a red flag**: DASPRI was developed as a patient-reported
+  symptom diary specifically to align with **FDA patient-reported-outcome (PRO)
+  guidance** for clinical trials — a newer, more regulatory-aligned instrument than
+  ESSPRI. It's plausible Amgen added it for Phase 3 specifically to strengthen the
+  regulatory submission package, not because ESSPRI performed poorly. Frame this as
+  "a new instrument added for a likely regulatory reason, with zero track record for
+  this drug," not as a hidden problem.
 
 ## Why ESSPRI-based endpoints carry a different, and generally worse, placebo-response risk than ESSDAI
 ESSPRI is a fully patient-reported, subjective symptom scale (0–10 VAS averaged across
@@ -47,9 +58,12 @@ But a post hoc stratification found the **"high symptom burden" (HSB) subgroup**
 HSB phenotype is essentially the same population NCT06245408 deliberately enriches
 for. Read both ways:
 - **Bullish angle:** NCT06245408's enrichment strategy (screening specifically for
-  high symptom burden, ESSPRI≥5) mirrors exactly the subgroup where JOQUER's post hoc
-  analysis found signal — i.e., Amgen's population selection is aimed at the part of
-  the ESSPRI trial-design space with the best historical precedent for showing an effect.
+  high symptom burden, ESSPRI≥5) targets a patient phenotype conceptually similar to
+  the subgroup where JOQUER's post hoc analysis found signal — not procedurally
+  identical (JOQUER's "high symptom burden" subgroup was defined by its own
+  exploratory clustering method, not a simple ESSPRI≥5 cutoff), but a directionally
+  relevant precedent for the part of the ESSPRI trial-design space more likely to show
+  an effect.
 - **Bearish angle:** JOQUER's HSB signal was post hoc/exploratory, not the trial's
   pre-specified primary analysis — a positive subgroup finding in one old trial is a
   much weaker prior than a genuine ESSDAI proof of mechanism.

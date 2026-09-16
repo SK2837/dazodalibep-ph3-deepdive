@@ -50,12 +50,22 @@ Bridges to Phase 3 NCT06245408.
   causes thromboembolism *during* dosing with first-generation anti-CD40L antibodies.
   Use the precise claim ("timing argues against the known mechanism") rather than
   "no serious safety signal" in the deck.
-- **Correction**: Table 3 reports **one death** (Population 1, DAZ-PBO group, Stage
-  II+follow-up, n=1), not "two deaths" as an earlier version of this note stated — a
-  59-year-old female who developed COVID-19 pneumonia and died of an unknown cause 46
-  days after her final DAZ dose (12 days after COVID-19 diagnosis); investigators
-  considered this event unrelated to study medication given her risk factors (heart
-  failure, hypertension, morbid obesity, pulmonary fibrosis).
+- **Correction**: Table 3 reports **one death** (Population 1, DAZ-PBO group, n=1),
+  not "two deaths" as an earlier version of this note stated — a 59-year-old female
+  who developed COVID-19 infection and died of an unknown cause 46 days after her
+  final DAZ dose (12 days after COVID-19 diagnosis); investigators considered this
+  event unrelated to study medication given her risk factors (heart failure,
+  hypertension, morbid obesity, pulmonary fibrosis).
+- **Precision on timing (a second review flagged this as ambiguous, worth stating
+  exactly)**: the paper's prose describes this as one of "two serious AEs reported
+  during stage I" for this participant, and explicitly states "the SAEs occurring in
+  population 1 during stage I were deemed by investigators to be unrelated to study
+  medication." Table 3 itself, however, tabulates the death count under the
+  **Stage II+follow-up** column (DAZ-PBO arm, n=34, 1 death = 2.9%) — because the
+  death occurred 46 days after the last dose, which falls chronologically within that
+  later observation window even though the underlying SAE (the COVID-19 infection)
+  was first reported during Stage I. Both facts are accurate; report them together
+  rather than picking one label.
 - **Added**: Population 2 also had an SAE of **invasive ductal breast carcinoma**
   (DAZ-PBO group, a 42-year-old female, onset 139 days after her final DAZ dose),
   captured as both an SAE and an AESI of malignant neoplasm. **Investigators

@@ -35,9 +35,16 @@ ESSDAI change from baseline at Week 24 — NOT a pairwise dose-vs-placebo compar
 None of the individual pairwise comparisons reached significance at α=0.05 — but this
 does not mean the trial "failed," because the pairwise comparisons were not the
 primary analysis. The dose-response test the trial was actually powered and designed
-around was positive. The placebo arm's own decline (−6.39) exceeding the 5mg and 50mg
-arms is a real placebo-response observation, but doesn't override the fact that a
-significant monotonic dose-response was demonstrated across the full model set.
+around was positive.
+
+**Correction (caught in a second review pass): the earlier claim that "placebo's own
+decline exceeded 2 of 3 drug doses" was an arithmetic error.** Placebo (−6.39) only
+exceeded the 5mg arm (−5.64) — the 50mg arm (−6.93) actually declined *more* than
+placebo, i.e. numerically outperformed it. So placebo exceeded exactly **one** of the
+three doses (5mg), not two. This is still a real, worth-noting placebo-response
+observation for the lowest dose, but it doesn't extend to 50mg, and it doesn't
+override the fact that a significant monotonic dose-response was demonstrated across
+the full model set.
 
 **Secondary endpoint (supportive, not primary):** Physician's Global Assessment at
 Wk24 showed clear dose-ordered separation (300mg −31.99 vs placebo −23.64), and

@@ -1,3 +1,6 @@
 .DS_Store
 ~$*
 00_reference/*.pdf
+05_deck/.venv/
+__pycache__/
+*.pyc
