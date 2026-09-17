@@ -1,84 +1,107 @@
 # Dazodalibep Phase 3 Deep Dive
 
-A clinical/statistical deep dive on Amgen's dazodalibep Phase 3 program in Sjögren's
-disease (**NCT06104124** and **NCT06245408**), building toward an evidence-backed call
-on whether the primary efficacy endpoint(s) will read out positive or negative.
+A clinical and statistical analysis of Amgen's dazodalibep Phase 3 program in
+Sjögren's disease, built to answer one question: **will the primary efficacy
+endpoint(s) read out positive or negative**, and why. Prepared by Sai Adarsh Kasula
+(Data Scientist / Biostatistician).
 
-**Start here if you're new to this project: [`PROJECT_STATUS.md`](PROJECT_STATUS.md)**
-(also available as [`PROJECT_STATUS.pdf`](PROJECT_STATUS.pdf)) — a full explanation of
-what's been done, the current bull/base/bear numbers and final call, what the
-reference deck says and how it's being used, and an honest review against the brief.
-This README is just the file index.
+**The finished deliverable is `05_deck/FinalSubmission.pptx`.** Everything else in
+this repository is the evidence, modeling, and review trail behind it.
 
-## Scope
+## The call
 
-- **NCT06104124** (systemic disease activity, ESSDAI-based) — full treatment: biological
-  rationale, Phase 2→Phase 3 bridge, statistical risk profile, competitor and historical
-  benchmarking, quantitative scenario modeling, and an explicit thesis.
-- **NCT06245408** (symptomatic disease, ESSPRI **and DASPRI**-based) — lighter
-  treatment: trial design, risk-profile comparison against the primary trial, and a
-  directional (non-modeled) read.
+We lean **positive** on **NCT06104124** (systemic disease activity, ESSDAI primary
+endpoint), with material, explicitly quantified uncertainty — not a confident
+prediction. The trial's size means it does not need to fully repeat Phase 2's
+observed effect to succeed, but the honest variance range narrows that cushion
+considerably compared to the most optimistic assumption. We lean **positive with a
+wider error bar** on **NCT06245408** (symptomatic disease, ESSPRI + DASPRI), whose own
+Phase 2 precursor produced the cleanest signal in the whole program, but which adds a
+second primary instrument (DASPRI) with zero track record for this drug.
 
-Analysis is scientific/statistical only — no valuation, peak-sales, or DCF work.
+The single strongest reason this could go the other way: the only real precedent
+available for how much a Phase 2 effect typically shrinks going into Phase 3
+(a competitor drug, ianalumab) covers a much smaller scale-up than dazodalibep's own —
+so there's no real precedent for what happens to its effect at this scale. Full
+reasoning: `03_analysis/final_thesis.md`.
 
-## Status: Day 1 and Day 2 complete; corrected after external review (Sept 15, 2026)
+## What this project actually is
 
-An external review identified several factual and statistical errors in the Day 1/2
-work — most significantly: ianalumab's Phase 2b was originally mischaracterized as a
-missed primary endpoint (it actually met its primary dose-response objective), the
-historical trial comparison used inconsistent success criteria across trials, a
-statistical calculation understated variance and overstated confidence, and the
-secondary trial's DASPRI co-primary endpoint was missing from the narrative entirely.
-All of these have been corrected — each corrected file carries its own "correction
-note." The review itself was not fully accurate either (see the correction note in
-`02_research/phase2_baseline_characteristics.md`) — corrections were applied only
-after re-verifying against primary sources, not accepted at face value.
+Amgen has two large, completed-or-completing Phase 3 trials testing dazodalibep — a
+non-antibody protein that blocks the CD40L signal implicated in Sjögren's disease —
+and hasn't announced results yet. This project builds a sell-side-analyst-style
+forecast of that unannounced result using only public information: the drug's
+published Phase 2 trial, the official trial registrations, competing drugs' results in
+the same disease, and the published literature on how reliable the measurement tools
+themselves are. It does not include valuation, peak-sales, or market-sizing work —
+the scope is deliberately science and statistics only.
 
-## Folder structure
+## How the evidence was built and checked
 
-```
-├── README.md                  ← you are here
-├── PROJECT_PLAN.md            ← original scope/day-by-day plan
-├── PROJECT_STATUS.md/.pdf     ← full current-state explanation (read this first)
-├── 00_reference/              ← source PDFs + the external review
-├── 01_data/                   ← ClinicalTrials.gov registry exports (CSV)
-├── 02_research/               ← Day 1 findings (Phase 2 data, ESSDAI literature, competitors)
-├── 03_analysis/               ← Day 2 modeling (scenario model, final thesis)
-├── 04_summaries/              ← plain-language recaps
-└── 05_deck/                   ← Day 3/4 presentation output (not yet started)
-```
+This isn't a single pass of research — it went through real correction cycles, and
+that history is preserved rather than hidden, because it's part of what makes the
+final numbers trustworthy:
 
-## File index
+1. **Primary-source research.** Every clinical number traces back to either the
+   published Phase 2 paper (not a summary of it), the official ClinicalTrials.gov
+   registration for each trial, or a competing drug's own published results —
+   consolidated in `03_analysis/evidence_table.md`.
+2. **An independent external review** (`00_reference/external_review.md`) caught
+   several real errors in the first pass — most significantly, a competitor drug's
+   early trial was mischaracterized as a failure when it had actually met its real
+   prespecified objective, and a statistics calculation understated the uncertainty
+   in the forecast.
+3. **Those corrections were themselves re-verified against the primary sources**,
+   not accepted on trust — in the process, some of the reviewer's own proposed
+   "corrections" turned out to be wrong and were rejected (documented directly in
+   `02_research/phase2_baseline_characteristics.md`). A second, independent review
+   pass caught further real errors (an arithmetic mistake, a statistical framing
+   issue) which were fixed the same way — verified, not assumed.
 
-| File | Contents |
+The result is a set of research files that say, explicitly, what was wrong at each
+stage and why the current number is the one to trust — rather than a single clean
+narrative that hides how the analysis actually got built.
+
+## Repository structure
+
+| Folder | What's in it |
 |---|---|
-| [`00_reference/phase2_paper.pdf`](00_reference/phase2_paper.pdf) | St. Clair et al. 2024, Nature Medicine — the Phase 2 trial publication (CC-BY 4.0 open access) |
-| [`00_reference/reference_deck_maestro_nash.pdf`](00_reference/reference_deck_maestro_nash.pdf) | Jefferies' MAESTRO-NASH analyst deck — the supplied template for analytical depth/slide anatomy |
-| [`00_reference/external_review.md`](00_reference/external_review.md) | The external review that prompted the correction pass |
-| [`01_data/NCT06104124.csv`](01_data/NCT06104124.csv) | Primary trial registry data (ClinicalTrials.gov, verified) |
-| [`01_data/NCT06245408.csv`](01_data/NCT06245408.csv) | Secondary trial registry data — lists both ESSPRI and DASPRI as co-primary outcomes |
-| [`01_data/competitor_trials_landscape.csv`](01_data/competitor_trials_landscape.csv) | Full landscape of Sjögren's trials across dazodalibep, ianalumab, and iscalimab |
-| [`02_research/phase2_results.md`](02_research/phase2_results.md) | Dazodalibep Phase 2 results, verified against the primary source (both cohorts); corrected safety detail and RA/SLE subgroup data |
-| [`02_research/phase2_paper_explained.md`](02_research/phase2_paper_explained.md) | Plain-language walkthrough of the Phase 2 paper and the Phase 2→3 bridge logic |
-| [`02_research/phase2_baseline_characteristics.md`](02_research/phase2_baseline_characteristics.md) | Full Table 1 baseline data, both populations |
-| [`02_research/essdai_measurement_properties.md`](02_research/essdai_measurement_properties.md) | ESSDAI literature: MCID (within-patient scope, corrected), placebo-response model, CRESS/STAR check |
-| [`02_research/ianalumab_competitor_analysis.md`](02_research/ianalumab_competitor_analysis.md) | Corrected: Ph2b met its primary (dose-response) objective; individual NEPTUNUS-1/-2 arm results |
-| [`02_research/historical_trial_evidence.md`](02_research/historical_trial_evidence.md) | Qualitative evidence table across comparator trials — corrected TRACTISS/ETAP classifications, no probability figure |
-| [`02_research/nct06245408_risk_note.md`](02_research/nct06245408_risk_note.md) | Secondary trial risk read — includes DASPRI |
-| [`03_analysis/scenario_model.md`](03_analysis/scenario_model.md) | Statistical model — three-way variance sensitivity, scenario table labeled as assumptions, not forecasts |
-| [`03_analysis/final_thesis.md`](03_analysis/final_thesis.md) | Final positive/negative call for NCT06104124, ranked evidence, counter-argument |
-| [`03_analysis/additional_topics.md`](03_analysis/additional_topics.md) | Dose/exposure PK-PD bridge, clinical-meaning synthesis, readout interpretation table |
-| [`03_analysis/evidence_table.md`](03_analysis/evidence_table.md) | Master evidence table — every material number, population/timepoint/analysis/source/uncertainty |
-| [`04_summaries/day1_summary.md`](04_summaries/day1_summary.md) | Day 1 recap (historical record — see its correction note for what's superseded) |
-| [`04_summaries/plain_english_summary.md`](04_summaries/plain_english_summary.md) | Full non-technical walkthrough of the whole project |
+| `00_reference/` | Source materials: the Phase 2 publication, the Jefferies-supplied reference deck (style template only, not reused for branding), and the external review that drove the correction pass |
+| `01_data/` | Raw ClinicalTrials.gov registry exports for both trials plus the broader competitor landscape |
+| `02_research/` | The evidentiary base — Phase 2 results and baseline data, the measurement-tool literature (ESSDAI/ESSPRI reliability), the competitor drug analysis, and the historical trial track record |
+| `03_analysis/` | The actual modeling — the statistical scenario model, the additional supporting analyses (dose selection, clinical-meaning framing), the master evidence table, and the final thesis document with the explicit call |
+| `04_summaries/` | Non-technical walkthroughs for a reader without a clinical or statistics background |
+| `05_deck/` | Everything related to the presentation itself — see below |
 
-Note: the Phase 2 publication is CC-BY 4.0 open access, not restrictively
-copyrighted — it's excluded from git for practical size/housekeeping reasons, not a
-copyright concern. The Jefferies reference deck is excluded because it's proprietary
-material, not for redistribution. Both are `*.pdf`-gitignored.
+### Inside `05_deck/`
 
-## Next: Day 3
+| Item | What it is |
+|---|---|
+| `FinalSubmission.pptx` | **The deliverable.** |
+| `companion_report.pdf` | A 41-page plain-language walkthrough of every slide, for a reader without the technical background |
+| `content/` | The slide-by-slide content specification the deck was built from, plus the drafts and review that led to it |
+| `build/` | The Python tooling used to generate the deck's charts and assemble the presentation, plus the pre-edit auto-built version of the deck (before manual refinement into `FinalSubmission.pptx`) |
 
-Slide-by-slide outline for the presentation, to be built out in `05_deck/`. Per the
-external review's Section 5 recommendations (a 20-slide + 6-appendix structure), this
-has not yet started.
+## What's deliberately not resolved
+
+Stated honestly rather than papered over:
+- The exact statistical analysis plan for NCT06104124 (dose allocation, multiplicity
+  correction across its two dose arms) is not public — the model tests a range of
+  reasonable assumptions instead of picking one.
+- Dazodalibep's own DASPRI results don't exist — the instrument doesn't appear
+  anywhere in the Phase 2 publication at all, confirmed by a full-text search.
+- A small enrollment discrepancy for a competitor trial (506 vs. 504, depending on
+  source) is reported as-is rather than silently resolved to one figure.
+- The deck's visual layout has not been checked by rendering it to images in this
+  environment (no presentation software available here) — only its text and table
+  content has been directly verified.
+
+## Regenerating the deck
+
+```bash
+cd 05_deck
+python3 -m venv .venv && source .venv/bin/activate
+pip install python-pptx matplotlib scipy
+python3 build/make_charts.py    # regenerates the chart/diagram images
+python3 build/build_deck.py     # assembles the .pptx from content/final_slide_content.md
+```
