@@ -82,19 +82,6 @@ narrative that hides how the analysis actually got built.
 | `content/` | The slide-by-slide content specification the deck was built from, plus the drafts and review that led to it |
 | `build/` | The Python tooling used to generate the deck's charts and assemble the presentation, plus the pre-edit auto-built version of the deck (before manual refinement into `FinalSubmission.pptx`) |
 
-## What's deliberately not resolved
-
-Stated honestly rather than papered over:
-- The exact statistical analysis plan for NCT06104124 (dose allocation, multiplicity
-  correction across its two dose arms) is not public — the model tests a range of
-  reasonable assumptions instead of picking one.
-- Dazodalibep's own DASPRI results don't exist — the instrument doesn't appear
-  anywhere in the Phase 2 publication at all, confirmed by a full-text search.
-- A small enrollment discrepancy for a competitor trial (506 vs. 504, depending on
-  source) is reported as-is rather than silently resolved to one figure.
-- The deck's visual layout has not been checked by rendering it to images in this
-  environment (no presentation software available here) — only its text and table
-  content has been directly verified.
 
 ## Regenerating the deck
 
