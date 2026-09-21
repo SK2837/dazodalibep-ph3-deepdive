@@ -38,7 +38,7 @@ the scope is deliberately science and statistics only.
 
 ## How the evidence was built and checked
 
-This isn't a single pass of research — it went through real correction cycles, and
+This isn't a single pass of research it went through real correction cycles, and
 that history is preserved rather than hidden, because it's part of what makes the
 final numbers trustworthy:
 
@@ -47,19 +47,19 @@ final numbers trustworthy:
    registration for each trial, or a competing drug's own published results —
    consolidated in `03_analysis/evidence_table.md`.
 2. **An independent external review** (`00_reference/external_review.md`) caught
-   several real errors in the first pass — most significantly, a competitor drug's
+   several real errors in the first pass most significantly, a competitor drug's
    early trial was mischaracterized as a failure when it had actually met its real
    prespecified objective, and a statistics calculation understated the uncertainty
    in the forecast.
 3. **Those corrections were themselves re-verified against the primary sources**,
-   not accepted on trust — in the process, some of the reviewer's own proposed
+   not accepted on trust in the process, some of the reviewer's own proposed
    "corrections" turned out to be wrong and were rejected (documented directly in
    `02_research/phase2_baseline_characteristics.md`). A second, independent review
    pass caught further real errors (an arithmetic mistake, a statistical framing
-   issue) which were fixed the same way — verified, not assumed.
+   issue) which were fixed the same way verified, not assumed.
 
 The result is a set of research files that say, explicitly, what was wrong at each
-stage and why the current number is the one to trust — rather than a single clean
+stage and why the current number is the one to trust rather than a single clean
 narrative that hides how the analysis actually got built.
 
 ## Repository structure
