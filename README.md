@@ -11,7 +11,7 @@ this repository is the evidence, modeling, and review trail behind it.
 ## The call
 
 We lean **positive** on **NCT06104124** (systemic disease activity, ESSDAI primary
-endpoint), with material, explicitly quantified uncertainty — not a confident
+endpoint), with material, explicitly quantified uncertainty not a confident
 prediction. The trial's size means it does not need to fully repeat Phase 2's
 observed effect to succeed, but the honest variance range narrows that cushion
 considerably compared to the most optimistic assumption. We lean **positive with a
@@ -21,7 +21,7 @@ second primary instrument (DASPRI) with zero track record for this drug.
 
 The single strongest reason this could go the other way: the only real precedent
 available for how much a Phase 2 effect typically shrinks going into Phase 3
-(a competitor drug, ianalumab) covers a much smaller scale-up than dazodalibep's own —
+(a competitor drug, ianalumab) covers a much smaller scale-up than dazodalibep's own 
 so there's no real precedent for what happens to its effect at this scale. Full
 reasoning: `03_analysis/final_thesis.md`.
 
